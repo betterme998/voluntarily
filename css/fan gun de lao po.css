@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #000;
+}
+
+#wrapper{
+    height: 250px;
+    width: 250px;
+    margin: 200px auto;
+    transform-style: preserve-3d;
+    position: relative;
+    animation: Rotate 5s linear infinite;
+    -webkit-animation: Rotate 5s linear infinite;
+}
+
+#smallBox{
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    left: 65px;
+    top: 65px;
+}
+
+#wrapper #smallBox img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 120px;
+    width: 120px;
+    opacity: .7;
+}
+
+#largeBox{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#wrapper #largeBox img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 250px;
+    width: 250px;
+    opacity: .7;
+}
+
+@keyframes Rotate{
+    from{
+        -webkit-transform :rotateX(360deg) rotateY(0deg);
+        
+    }
+    to{
+        -webkit-transform: rotateX(0deg) rotateY(360deg);
+    }
+}/*Rotate*/
